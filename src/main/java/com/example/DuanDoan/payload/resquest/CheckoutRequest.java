@@ -1,15 +1,15 @@
 package com.example.DuanDoan.payload.resquest;
 
 public class CheckoutRequest {
-    private String CCCDout;
+    private String cccd;
     private String locationArrive;
 
-    public String getCCCDout() {
-        return CCCDout;
+    public String getCccd() {
+        return cccd;
     }
 
-    public void setCCCDout(String CCCDout) {
-        this.CCCDout = CCCDout;
+    public void setCccd(String cccd) {
+        this.cccd = cccd;
     }
 
     public String getLocationArrive() {
