@@ -1,43 +1,29 @@
-package com.example.DuanDoan.entity;
+package com.example.DuanDoan.payload.resquest;
 
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
-import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-@Entity
-@Table(name = "person")
-public class PersonEntity {
-    @Id
-    @Column(length = 30)
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String cccd;
-
-    @Column(name = "fullname")
-    private String fullname;
-
-    @Column(name="birthday")
-    private Date birthday;
-
-    @Column(name="address_on_cccd")
-    private String address_on_cccd;
-
-    @Column(name="current_address")
-    private String current_address;
-
-    @Column(name= "phone_number")
-    private int phone_number;
-
-    @Column(name="gender")
-    private String gender;
-
-    @Column(name="is_stay")
+public class CheckInRequest {
+    @NotBlank(message = "Căn cước công dân không được rỗng")
+    private String cccd ;
+    @NotBlank(message = "Tên không được rỗng")
+    private String fullname ;
+    @NotBlank(message = "")
+    private Date birthday ;
+    @NotBlank(message = "Địa chỉ không được rỗng")
+    private String address_on_cccd ;
+    @NotBlank(message = "Đại chỉ không được rỗng")
+    private String current_address ;
+    @NotBlank(message = "SDT không được để trống")
+    private int phone_number ;
+    @NotBlank(message = "")
+    private String gender ;
+    @NotNull(message = "")
     private boolean is_stay;
-
-    @Column(name="is_arrive")
-    private boolean is_arrive;
-
-    @Column(name="location_arrive")
+    @NotNull(message = "")
+    private boolean is_arrive ;
+    @NotBlank(message = "Không được rỗng")
     private String location_arrive;
 
     public String getCccd() {

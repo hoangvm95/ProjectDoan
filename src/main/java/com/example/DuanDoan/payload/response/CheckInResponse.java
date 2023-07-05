@@ -1,43 +1,28 @@
-package com.example.DuanDoan.entity;
+package com.example.DuanDoan.payload.response;
 
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
-import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name = "person")
-public class PersonEntity {
-    @Id
-    @Column(length = 30)
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String cccd;
+public class CheckInResponse {
 
-    @Column(name = "fullname")
-    private String fullname;
 
-    @Column(name="birthday")
-    private Date birthday;
+    private String cccd ;
 
-    @Column(name="address_on_cccd")
-    private String address_on_cccd;
+    private String fullname ;
 
-    @Column(name="current_address")
-    private String current_address;
+    private Date birthday ;
 
-    @Column(name= "phone_number")
-    private int phone_number;
+    private String address_on_cccd ;
 
-    @Column(name="gender")
-    private String gender;
+    private String current_address ;
 
-    @Column(name="is_stay")
+    private int phone_number ;
+
+    private String gender ;
+
     private boolean is_stay;
 
-    @Column(name="is_arrive")
-    private boolean is_arrive;
+    private boolean is_arrive ;
 
-    @Column(name="location_arrive")
     private String location_arrive;
 
     public String getCccd() {
