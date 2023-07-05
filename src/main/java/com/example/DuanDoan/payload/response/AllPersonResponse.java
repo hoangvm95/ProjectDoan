@@ -1,39 +1,28 @@
-package com.example.DuanDoan.entity;
+package com.example.DuanDoan.payload.response;
 
-import javax.persistence.*;
+
 import java.util.Date;
 
-@Entity(name="person")
-public class PersonEntity {
-    @Id
-    @Column(name ="cccd")
+public class AllPersonResponse {
+
     private String cccd;
 
-    @Column(name = "fullname")
     private String fullname;
 
-    @Column(name="birthday")
     private Date birthday;
 
-    @Column(name="addressOnCccd")
     private String addressOnCccd;
 
-    @Column(name="currentAddress")
     private String currentAddress;
 
-    @Column(name= "phoneNumber")
     private int phoneNumber;
 
-    @Column(name="gender")
     private String gender;
 
-    @Column(name="isStay")
     private boolean isStay;
 
-    @Column(name="isArrive")
     private boolean isArrive;
 
-    @Column(name="locationArrive")
     private String locationArrive;
 
     public String getCccd() {
