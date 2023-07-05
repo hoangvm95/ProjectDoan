@@ -1,6 +1,8 @@
 package com.example.DuanDoan.utils;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
+import io.jsonwebtoken.io.Encoders;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -13,9 +15,12 @@ public class JWTHelperUtils {
     String secretKey;
 
     public String generateToken(String data){
-        SecretKey key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secretKey));
+//        SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+//        String key = Encoders.BASE64.encode(secretKey.getEncoded());
+//        System.out.println(key);
 
-        String token = Jwts.builder().setSubject(data).signWith(key).compact();
+        SecretKey key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secretKey));
+       String token = Jwts.builder().setSubject(data).signWith(key).compact();
 
         return token;
     }

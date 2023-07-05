@@ -16,7 +16,7 @@ public class CheckoutService implements ICheckoutService {
         try {
             PersonEntity person = new PersonEntity();
             person.setCccd(checkoutRequest.getCccd());
-            person.setLocationArrive(checkoutRequest.getLocationArrive());
+            person.setLocation_arrive(checkoutRequest.getLocationArrive());
 
             checkoutRepository.save(person);
             return true;
