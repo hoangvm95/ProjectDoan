@@ -22,11 +22,11 @@ public class PersonService implements IPersonService {
             AllPersonResponse personResponse = new AllPersonResponse();
             personResponse.setCccd(data.getCccd());
             personResponse.setFullname(data.getFullname());
-            personResponse.setAddressOnCccd(data.getAddressOnCccd());
+            personResponse.setAddressOnCccd(data.getAddress_on_cccd());
             personResponse.setBirthday(data.getBirthday());
             personResponse.setGender(data.getGender());
-            personResponse.setCurrentAddress(data.getCurrentAddress());
-            personResponse.setPhoneNumber(data.getPhoneNumber());
+            personResponse.setCurrentAddress(data.getCurrent_address());
+            personResponse.setPhoneNumber(data.getPhone_number());
 
             responseList.add(personResponse);
         }

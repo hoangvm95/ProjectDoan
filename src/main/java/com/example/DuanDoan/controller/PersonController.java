@@ -3,10 +3,9 @@ package com.example.DuanDoan.controller;
 import com.example.DuanDoan.payload.response.BaseRespone;
 import com.example.DuanDoan.payload.resquest.CheckInRequest;
 import com.example.DuanDoan.payload.resquest.CheckoutRequest;
-import com.example.DuanDoan.service.CheckoutService;
 import com.example.DuanDoan.service.imp.ICheckInService;
 import com.example.DuanDoan.service.imp.ICheckoutService;
-//import com.example.DuanDoan.utils.JWTHelperUtils;
+import com.example.DuanDoan.service.imp.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,7 +37,7 @@ public class PersonController {
     }
 
     @PostMapping("/checkout")
-    public ResponseEntity<?> addPersonCheckout(CheckoutRequest checkoutRequest){
+    public ResponseEntity<?> addPersonCheckout(@RequestBody CheckoutRequest checkoutRequest){
         Boolean isSuccess = iCheckoutService.addPersonCheckout(checkoutRequest);
         BaseRespone respone = new BaseRespone();
         respone.setMessage(isSuccess ? "Đăng ký thành công" : "Đăng ký thất bại");
