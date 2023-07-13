@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/cozastore.iml" filepath="$PROJECT_DIR$/cozastore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjectDoan.iml" filepath="$PROJECT_DIR$/ProjectDoan.iml" />
     </modules>
   </component>
 </project>
